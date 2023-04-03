@@ -131,13 +131,16 @@ else{ alert("Исполнить прививку пациенту"+infoname);}
 ForSecond=FirstFunction(person, SNILS);
 SecondFunction(statusPriv, infoname);
 //Предлагаем закончить или продложить работу в этом окне
-var prolongation = confirm("Продолжить проверку прививочного статуса?");
+while(confirm("Продолжить проверку прививочного статуса?")){
+    ForSecond=FirstFunction(person, SNILS);
+    SecondFunction(statusPriv, infoname);
+}
+/*var prolongation = confirm("Продолжить проверку прививочного статуса?");
 if (prolongation) {
     console.log("Введите СНИЛС");
-} else {
-    console.log("Сеанс проверки прививочного статуса закончен");
-}
-
+} */
+    
+console.log("Сеанс проверки прививочного статуса закончен");
     </script>
 </body>
 </html>
